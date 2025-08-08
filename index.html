@@ -1,463 +1,497 @@
+code
+Html
+download
+content_copy
+expand_less
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAAJ CONSULTANCY SERVICES - Manpower, Software, and Telecom Solutions</title>
-    <meta name="description" content="RAAJ CONSULTANCY SERVICES provides expert manpower consultancy, custom software solutions, and IT/telecom support services in Bangalore, India.">
-    <meta name="keywords" content="manpower consultancy, telecom support, software solutions, IT infrastructure, project support, Bangalore, RAAJ CONSULTANCY SERVICES">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="RAAJ CONSULTANCY SERVICES offers expert Firewall Security, Manpower Consultancy, Software Solutions, and IT & Telecom Support Services in Bangalore, India.">
+    <meta name="keywords" content="Firewall Security, Manpower Consultancy, Telecom Support, IT Infrastructure, Custom Software, Bangalore, RAAJ CONSULTANCY SERVICES">
+    <title>RAAJ CONSULTANCY SERVICES - IT & Telecom Solutions</title>
+    
     <style>
-        /* CSS Reset and Base Styles */
+        /* CSS Reset and Global Styles */
         :root {
-            --primary-color: #003366; /* Deep Blue */
-            --secondary-color: #005A9C; /* Brighter Blue */
-            --accent-color: #F39C12; /* Gold/Orange Accent */
-            --text-dark: #333333;
-            --text-light: #f4f4f4;
-            --background-light: #ffffff;
-            --background-grey: #f9f9f9;
-            --border-color: #dddddd;
+            --primary-color: #0d47a1; /* Deep Blue */
+            --secondary-color: #1565c0; /* Lighter Blue */
+            --accent-color: #42a5f5; /* Bright Blue Accent */
+            --text-color: #f5f5f5; /* Light Gray/White */
+            --dark-bg-color: #121212; /* Very Dark Gray */
+            --section-bg-color: #1e1e1e; /* Darker Gray for sections */
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
             scroll-behavior: smooth;
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.7;
-            color: var(--text-dark);
-            background-color: var(--background-light);
-        }
-
-        h1, h2, h3, h4 {
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        
-        h1 { font-size: 2.8rem; }
-        h2 { font-size: 2.2rem; text-align: center; margin-bottom: 2.5rem; }
-        h3 { font-size: 1.5rem; color: var(--secondary-color); }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        a {
-            text-decoration: none;
-            color: var(--secondary-color);
+            font-family: var(--font-main);
+            background-color: var(--dark-bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
         }
 
         .container {
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+            margin: auto;
+            padding: 0 20px;
         }
 
         section {
-            padding: 5rem 0;
-        }
-        
-        section:nth-of-type(even) {
-            background-color: var(--background-grey);
+            padding: 80px 0;
         }
 
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: var(--accent-color);
-            margin: 1rem auto 0;
+        h1, h2, h3 {
+            color: var(--accent-color);
+            margin-bottom: 20px;
         }
 
-        /* Header & Navigation */
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        /* Header and Navigation */
         .header {
-            background: var(--background-light);
-            color: var(--text-dark);
-            padding: 1rem 0;
+            background-color: rgba(18, 18, 18, 0.8);
+            backdrop-filter: blur(10px);
             position: fixed;
             width: 100%;
             top: 0;
             left: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: background 0.3s ease;
+            transition: background-color 0.3s ease;
         }
 
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 80px;
         }
 
-        .nav-logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
+        .navbar .logo img {
+            height: 60px;
+            width: auto;
         }
 
         .nav-menu {
+            list-style: none;
             display: flex;
-            gap: 1.5rem;
         }
 
-        .nav-link {
-            font-weight: 600;
-            color: var(--secondary-color);
+        .nav-menu li {
+            margin-left: 30px;
+        }
+
+        .nav-menu a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            position: relative;
             transition: color 0.3s ease;
         }
 
-        .nav-link:hover {
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-menu a:hover, .nav-menu a.active {
             color: var(--accent-color);
         }
 
+        .nav-menu a:hover::after, .nav-menu a.active::after {
+            width: 100%;
+        }
+
+        /* Hamburger Menu */
         .hamburger {
             display: none;
             cursor: pointer;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 28px;
+            height: 24px;
         }
 
-        .bar {
-            display: block;
-            width: 25px;
+        .hamburger .bar {
+            width: 100%;
             height: 3px;
-            margin: 5px auto;
-            background-color: var(--primary-color);
+            background-color: var(--text-color);
+            border-radius: 5px;
             transition: all 0.3s ease-in-out;
         }
 
         /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80') no-repeat center center/cover;
-            color: var(--text-light);
+        #home {
             height: 100vh;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             text-align: center;
-            padding-top: 80px; /* Offset for fixed header */
-        }
-        
-        .hero-content {
-            max-width: 800px;
+            background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.7)), url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80') no-repeat center center/cover;
+            color: white;
         }
 
-        .hero h1 {
+        .hero-content h1 {
             font-size: 3.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-            color: var(--background-light);
+            margin-bottom: 20px;
+            color: white;
         }
 
-        .hero .tagline {
-            font-size: 1.4rem;
-            margin-bottom: 2rem;
-            font-weight: 300;
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
         }
 
-        .hero .cta-button {
-            background-color: var(--accent-color);
-            color: var(--primary-color);
-            padding: 1rem 2.5rem;
-            border-radius: 5px;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+        .cta-button {
             display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
         }
 
-        .hero .cta-button:hover {
-            background-color: #ffb84d;
-            transform: translateY(-3px);
+        .cta-button:hover {
+            background-color: var(--secondary-color);
         }
 
         /* About Us Section */
-        #about .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
+        #about {
+            background-color: var(--section-bg-color);
         }
-        
-        #about .about-image {
-            width: 100%;
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        .about-text { flex: 1; }
+        .about-image { flex: 1; text-align: center; }
+        .about-image img {
+            max-width: 80%;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
         /* Services Section */
+        #services {
+            background-color: var(--dark-bg-color);
+        }
+
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
 
         .service-card {
-            background: var(--background-light);
-            padding: 2.5rem 2rem;
+            background-color: var(--section-bg-color);
+            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--primary-color);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-left: 5px solid var(--secondary-color);
         }
 
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
         }
 
         .service-card ul {
-            list-style-type: '✓ ';
-            padding-left: 1.2rem;
+            list-style-type: none;
+            padding-left: 0;
         }
         
-        .service-card ul li {
-            padding-left: 0.5rem;
-            margin-bottom: 0.5rem;
+        .service-card li {
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 10px;
         }
-        
-        .service-card h3 {
-            margin-bottom: 1.5rem;
-        }
-        
-        /* Why Choose Us Section */
-        #why-us .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            text-align: center;
-        }
-
-        .feature-item {
-            padding: 2rem;
-        }
-        
-        .feature-item .icon {
-            font-size: 3rem;
+        .service-card li::before {
+            content: '✓';
             color: var(--accent-color);
-            margin-bottom: 1rem;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
         }
 
-        /* Clients & Projects and Legal Section */
-        .info-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: start;
+        /* Clients & Why Choose Us Section */
+        #clients {
+            background-color: var(--section-bg-color);
         }
         
-        .info-card {
-            background: var(--background-light);
-            padding: 2.5rem;
+        .clients-container {
+            display: flex;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .client-box, .why-us-box {
+            background: var(--dark-bg-color);
+            padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-        }
-        
-        .info-card ul {
-            list-style-type: '✓ ';
-            padding-left: 1rem;
+            flex: 1;
+            min-width: 300px;
         }
 
-        .info-card ul li {
-            margin-bottom: 0.5rem;
-            padding-left: 0.5rem;
+        .client-box h3, .why-us-box h3 {
+             border-bottom: 2px solid var(--accent-color);
+             padding-bottom: 10px;
+        }
+        
+        .client-box ul, .why-us-box ul {
+            list-style: none;
+        }
+        
+        .client-box li, .why-us-box li {
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        .client-box li::before, .why-us-box li::before {
+            content: '►';
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
         }
 
         /* Contact Section */
-        #contact .container {
-            max-width: 800px;
-            text-align: center;
+        #contact {
+            background-color: var(--dark-bg-color);
         }
 
         .contact-form {
-            margin-top: 3rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
+            max-width: 700px;
+            margin: 40px auto 0 auto;
+            background: var(--section-bg-color);
+            padding: 40px;
+            border-radius: 8px;
+        }
+        
+        .contact-form .form-group {
+            margin-bottom: 20px;
         }
 
-        .form-group {
-            width: 100%;
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--accent-color);
         }
 
-        .form-control {
+        .contact-form input,
+        .contact-form textarea {
             width: 100%;
-            padding: 1rem;
-            font-size: 1rem;
-            font-family: 'Poppins', sans-serif;
-            border: 1px solid var(--border-color);
+            padding: 12px;
             border-radius: 5px;
-            transition: border-color 0.3s ease;
+            border: 1px solid var(--secondary-color);
+            background-color: var(--dark-bg-color);
+            color: var(--text-color);
+            font-size: 1rem;
         }
-
-        .form-control:focus {
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
             outline: none;
-            border-color: var(--secondary-color);
+            border-color: var(--accent-color);
+            box-shadow: 0 0 5px var(--accent-color);
         }
 
-        .submit-btn {
-            background-color: var(--primary-color);
-            color: var(--text-light);
+        .contact-form button {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--accent-color);
+            color: white;
             border: none;
-            padding: 1rem 2.5rem;
             border-radius: 5px;
-            font-weight: 600;
-            font-size: 1rem;
+            font-size: 1.1rem;
             cursor: pointer;
-            transition: background-color 0.3s ease;
-            width: auto;
-            align-self: center;
+            transition: background-color 0.3s;
         }
 
-        .submit-btn:hover {
+        .contact-form button:hover {
             background-color: var(--secondary-color);
         }
         
-        .contact-cta p {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-        
-        .contact-cta a {
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-
-        /* Footer */
-        .footer {
-            background-color: var(--primary-color);
-            color: var(--text-light);
-            padding: 3rem 0;
+        .form-message {
+            margin-top: 15px;
             text-align: center;
         }
 
-        .footer-content .company-info p {
-            margin-bottom: 0.5rem;
-        }
 
-        .footer-content a {
-            color: var(--text-light);
-            transition: color 0.3s ease;
+        /* Footer */
+        .footer {
+            background-color: #000;
+            color: #ccc;
+            padding: 50px 0;
+            text-align: center;
         }
         
-        .footer-content a:hover {
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+            align-items: flex-start;
+        }
+        
+        .footer-box {
+            flex: 1;
+            min-width: 250px;
+            text-align: left;
+        }
+        
+        .footer-box h4 {
             color: var(--accent-color);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
         }
         
-        .copyright {
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--secondary-color);
-            font-size: 0.9rem;
-            opacity: 0.8;
+        .footer-box p, .footer-box a {
+            color: #ccc;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+        
+        .footer-box a:hover {
+            color: white;
         }
 
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            h1 { font-size: 2.5rem; }
-            .hero h1 { font-size: 3rem; }
-            h2 { font-size: 2rem; }
-            
-            #about .about-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            #about .about-image {
-                max-width: 500px;
-                margin: 0 auto;
-            }
-            
-            .info-grid {
-                 grid-template-columns: 1fr;
-            }
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
         }
         
+        /* Animation on Scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsiveness */
         @media (max-width: 768px) {
             .nav-menu {
-                position: fixed;
-                left: -100%;
-                top: 80px; /* Match header height */
+                display: flex;
                 flex-direction: column;
-                background-color: var(--background-light);
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                top: 80px; /* Height of the navbar */
+                left: -100%;
                 width: 100%;
-                text-align: center;
-                transition: 0.3s;
-                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-                gap: 0;
+                height: calc(100vh - 80px);
+                background-color: var(--section-bg-color);
+                transition: left 0.3s ease-in-out;
             }
 
             .nav-menu.active {
                 left: 0;
             }
             
-            .nav-item {
-                border-bottom: 1px solid var(--background-grey);
-            }
-
-            .nav-link {
-                display: block;
-                padding: 1.5rem 0;
+            .nav-menu li {
+                margin: 20px 0;
             }
 
             .hamburger {
-                display: block;
+                display: flex;
             }
 
             .hamburger.active .bar:nth-child(2) {
                 opacity: 0;
             }
-
             .hamburger.active .bar:nth-child(1) {
-                transform: translateY(8px) rotate(45deg);
+                transform: translateY(10.5px) rotate(45deg);
+            }
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-10.5px) rotate(-45deg);
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .hero-content p {
+                font-size: 1.2rem;
             }
 
-            .hamburger.active .bar:nth-child(3) {
-                transform: translateY(-8px) rotate(-45deg);
+            h2 {
+                font-size: 2rem;
             }
             
-            .hero {
-                height: auto;
-                padding: 150px 0 100px 0;
+            .about-content {
+                flex-direction: column;
             }
             
-            .hero h1 { font-size: 2.5rem; }
-            .hero .tagline { font-size: 1.2rem; }
-            section { padding: 4rem 0; }
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .footer-box {
+                text-align: center;
+            }
+
         }
-        
-        @media (max-width: 576px) {
-            .container { padding: 0 1rem; }
-            h1 { font-size: 2.2rem; }
-            .hero h1 { font-size: 2.4rem; }
-            h2 { font-size: 1.8rem; }
-            .footer { padding: 2rem 0; }
-        }
+
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
     <header class="header">
         <nav class="navbar container">
-            <a href="#hero" class="nav-logo">RAAJ CONSULTANCY</a>
+            <a href="#home" class="logo">
+                <img src="https://i.postimg.cc/zv75wkWN/RCS.png" alt="RAAJ CONSULTANCY SERVICES Logo">
+            </a>
             <ul class="nav-menu">
-                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="#why-us" class="nav-link">Why Us</a></li>
-                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#clients" class="nav-link">Clients</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -469,30 +503,25 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="hero">
-            <div class="hero-content">
+        <section id="home">
+            <div class="hero-content fade-in">
                 <h1>RAAJ CONSULTANCY SERVICES</h1>
-                <p class="tagline">Your Partner for Excellence in Telecom & IT Infrastructure</p>
-                <a href="#contact" class="cta-button">Get in Touch</a>
+                <p>Driving Excellence in IT & Telecom Infrastructure</p>
+                <a href="#services" class="cta-button">Explore Our Services</a>
             </div>
         </section>
 
         <!-- About Us Section -->
         <section id="about">
             <div class="container">
-                <h2 class="section-title">About Us</h2>
+                <h2 class="fade-in">About Us</h2>
                 <div class="about-content">
-                    <div class="about-text">
-                        <h3>Dynamic and Results-Driven</h3>
-                        <p>
-                            RAAJ CONSULTANCY SERVICES is a dynamic and results-driven consultancy firm based in Bangalore, India. Established with a vision to deliver excellence, we specialize in providing manpower consultancy, project support services, and custom software solutions tailored for the telecom and IT infrastructure sectors.
-                        </p>
-                        <p>
-                            We are committed to delivering high-quality services through a client-focused approach, combining industry best practices with innovative technologies. Our goal is to empower your business with the right talent and the right tools.
-                        </p>
+                    <div class="about-text fade-in">
+                        <p>RAAJ CONSULTANCY SERVICES is a dynamic and results-driven consultancy firm based in Bangalore, India. Established with a vision to deliver excellence, we specialize in providing firewall security services, manpower consultancy, project support services, and custom software solutions tailored for the telecom and IT infrastructure sectors.</p>
+                        <p>We are committed to delivering high-quality services through a client-focused approach, combining industry best practices with innovative technologies.</p>
                     </div>
-                     <div class="about-image-container">
-                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="Professional team collaborating in an office" class="about-image">
+                    <div class="about-image fade-in">
+                         <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="Professional Team Discussion">
                     </div>
                 </div>
             </div>
@@ -501,10 +530,20 @@
         <!-- Services Section -->
         <section id="services">
             <div class="container">
-                <h2 class="section-title">Core Services</h2>
+                <h2 class="fade-in">Our Core Services</h2>
                 <div class="services-grid">
-                    <div class="service-card">
-                        <h3>1. Manpower Consultancy</h3>
+                    <div class="service-card fade-in">
+                        <h3>Firewall Security Services</h3>
+                        <ul>
+                            <li>Firewall installation, configuration, and maintenance</li>
+                            <li>Security policy design and implementation</li>
+                            <li>Firewall license monitoring and renewal management</li>
+                            <li>Remote and onsite technical support</li>
+                            <li>Network perimeter security audits and threat mitigation</li>
+                        </ul>
+                    </div>
+                    <div class="service-card fade-in">
+                        <h3>Manpower Consultancy</h3>
                         <ul>
                             <li>Recruitment support for telecom & IT domains</li>
                             <li>Contract staffing for project-based roles</li>
@@ -512,8 +551,8 @@
                             <li>Payroll and compliance management for outsourced teams</li>
                         </ul>
                     </div>
-                    <div class="service-card">
-                        <h3>2. Software Solutions & Automation</h3>
+                    <div class="service-card fade-in">
+                        <h3>Software Solutions & Automation</h3>
                         <ul>
                             <li>PHP, MySQL, and React-based dashboards</li>
                             <li>EMS tools, fault reporting, and SLA monitoring systems</li>
@@ -521,155 +560,202 @@
                             <li>Network inventory management and planning tools</li>
                         </ul>
                     </div>
-                    <div class="service-card">
-                        <h3>3. IT & Telecom Support</h3>
+                     <div class="service-card fade-in">
+                        <h3>IT & Telecom Support Services</h3>
                         <ul>
-                            <li>Site audits and detailed documentation</li>
-                            <li>OTN link tracking & comprehensive reporting</li>
+                            <li>Site audits and documentation</li>
+                            <li>OTN link tracking & reporting</li>
                             <li>AMC and technical support for EMS tools</li>
-                            <li>Firewall license monitoring & DCDR planning</li>
+                            <li>DCDR planning and operations support</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <!-- Why Choose Us Section -->
-        <section id="why-us">
-            <div class="container">
-                <h2 class="section-title">Why Choose Us</h2>
-                <div class="grid">
-                    <div class="feature-item">
-                        <div class="icon">✓</div>
-                        <h4>Experienced Team</h4>
-                        <p>Strong telecom domain knowledge drives our successful project delivery.</p>
-                    </div>
-                    <div class="feature-item">
-                         <div class="icon">✓</div>
-                        <h4>Proven Track Record</h4>
-                        <p>Successful projects delivered across South, North, East & West zones of India.</p>
-                    </div>
-                    <div class="feature-item">
-                        <div class="icon">✓</div>
-                        <h4>Flexible Engagement</h4>
-                        <p>We offer versatile models including onsite, offsite, and remote support.</p>
-                    </div>
-                    <div class="feature-item">
-                        <div class="icon">✓</div>
-                        <h4>Custom Automation</h4>
-                        <p>Deep integration into client systems for streamlined, efficient operations.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Clients & Projects Section -->
-        <section id="projects">
-            <div class="container">
-                <h2 class="section-title">Our Expertise</h2>
-                <div class="info-grid">
-                    <div class="info-card">
-                        <h3>Clients & Projects</h3>
-                        <p>Our client base includes major telecom OEMs, NMS integrators, and network operators across India. We have successfully supported projects involving:</p>
+
+        <!-- Clients and Why Choose Us Section -->
+        <section id="clients">
+             <div class="container">
+                <h2 class="fade-in">Our Edge</h2>
+                <div class="clients-container">
+                    <div class="why-us-box fade-in">
+                        <h3>Why Choose Us?</h3>
                         <ul>
-                            <li>DWDM & OTN deployments</li>
-                            <li>EMS license audits & upgrades</li>
-                            <li>Node failure reporting dashboards</li>
-                            <li>Service & route fault visualization tools</li>
+                            <li>Experienced team with strong telecom domain knowledge</li>
+                            <li>Proven project track record across South, North, East & West zones</li>
+                            <li>Flexible engagement models (onsite/offsite/remote)</li>
+                            <li>Custom automation with deep integration into client systems</li>
+                            <li>Prompt support and transparent communication</li>
                         </ul>
                     </div>
-                    <div class="info-card">
-                        <h3>Legal & Compliance</h3>
-                        <p>We operate with complete transparency and adherence to legal standards, ensuring a trustworthy partnership.</p>
+                     <div class="client-box fade-in">
+                        <h3>Our Clients & Projects</h3>
+                        <p>Our client base includes major telecom OEMs, NMS integrators, and network operators across India. We have supported projects involving:</p>
                         <ul>
-                            <li>PAN, GST, and MSME registration available upon request</li>
-                            <li>NDAs and SLAs signed for all major engagements</li>
-                            <li>In-house documentation and project management team</li>
+                           <li>DWDM & OTN deployments</li>
+                           <li>EMS license audits & upgrades</li>
+                           <li>Node failure reporting dashboards</li>
+                           <li>Service & route fault visualization tools</li>
                         </ul>
                     </div>
                 </div>
-            </div>
+             </div>
         </section>
 
         <!-- Contact Section -->
         <section id="contact">
             <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="contact-cta">
-                    <p>Let us help you streamline your operations with the right people and tools.</p>
-                    <p>
-                        Drop an email to <a href="mailto:info@raajconsultancy.com"><strong>info@raajconsultancy.com</strong></a> or call us at <a href="tel:+919740072049"><strong>+91 9740072049</strong></a>.
-                    </p>
-                    <p>We’re happy to collaborate!</p>
-                </div>
-                <form id="contactForm" class="contact-form">
+                <h2 class="fade-in">Contact Us</h2>
+                <p class="fade-in" style="text-align: center;">Let us help you streamline your operations with the right people and tools.</p>
+                <form id="contact-form" class="contact-form fade-in">
                     <div class="form-group">
-                        <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" name="message" rows="6" class="form-control" placeholder="Your Message" required></textarea>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
+                    <button type="submit">Send Message</button>
+                    <div id="form-message" class="form-message"></div>
                 </form>
             </div>
         </section>
     </main>
-    
-    <!-- Footer Section -->
+
     <footer class="footer">
         <div class="container footer-content">
-            <h3>RAAJ CONSULTANCY SERVICES</h3>
-            <div class="company-info">
-                 <p>Bangalore, Karnataka, India</p>
-                 <p>Phone: <a href="tel:+918861612182">+91 8861612182</a> | Email: <a href="mailto:info@raajconsultancy.com">info@raajconsultancy.com</a></p>
-                 <p>Website: <a href="http://www.raajconsultancy.com" target="_blank">www.raajconsultancy.com</a></p>
+            <div class="footer-box">
+                <h4>RAAJ CONSULTANCY SERVICES</h4>
+                <p>A dynamic and results-driven consultancy firm delivering excellence in IT & Telecom sectors.</p>
             </div>
-            <div class="copyright">
-                &copy; <span id="year"></span> RAAJ CONSULTANCY SERVICES. All Rights Reserved.
+             <div class="footer-box">
+                <h4>Contact Info</h4>
+                <p><strong>Location:</strong> Bangalore, Karnataka, India</p>
+                <p><strong>Phone:</strong> <a href="tel:+918861612182">+91 8861612182</a></p>
+                <p><strong>Support:</strong> <a href="tel:+919740072049">+91 9740072049</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@raajconsultancy.com">info@raajconsultancy.com</a></p>
+                <p><strong>Website:</strong> <a href="http://www.raajconsultancy.com" target="_blank">www.raajconsultancy.com</a></p>
             </div>
+             <div class="footer-box">
+                <h4>Legal & Compliance</h4>
+                <p>PAN, GST, and MSME registration available upon request.</p>
+                <p>NDAs and SLAs signed for all major engagements.</p>
+                <p>In-house documentation and project management team.</p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2025 RAAJ CONSULTANCY SERVICES. All Rights Reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Hamburger Menu Toggle
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
+        document.addEventListener('DOMContentLoaded', function() {
 
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
+            // Hamburger Menu Toggle
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }));
+            
+            // Smooth Scroll & Active Link Highlighting
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 85) { // 85 is navbar height + a little
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            // Fade-in Animation on Scroll
+            const faders = document.querySelectorAll('.fade-in');
+            const appearOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add('visible');
+                        appearOnScroll.unobserve(entry.target);
+                    }
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+            
+            // Contact Form Validation
+            const form = document.getElementById('contact-form');
+            const formMessage = document.getElementById('form-message');
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+                
+                if (name === '' || email === '' || message === '') {
+                    formMessage.textContent = 'All fields are required.';
+                    formMessage.style.color = '#ff6b6b';
+                    return;
+                }
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                     formMessage.textContent = 'Please enter a valid email address.';
+                     formMessage.style.color = '#ff6b6b';
+                     return;
+                }
+
+                // If validation passes
+                formMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+                formMessage.style.color = '#8ce99a';
+                form.reset();
+
+                // Since there is no backend, the message will disappear after a few seconds
+                setTimeout(() => {
+                    formMessage.textContent = '';
+                }, 5000);
+            });
         });
-        
-        // Close menu when a link is clicked
-        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        }));
-
-        // Contact Form Submission Alert
-        const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevents the default form submission behavior
-
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-
-            if (name && email && message) {
-                 // In a real application, you would send this data to a server.
-                // For this example, we'll just show an alert.
-                alert('Thank you for your message! We will get back to you shortly.');
-                contactForm.reset(); // Clears the form fields
-            } else {
-                alert('Please fill out all fields before submitting.');
-            }
-        });
-
-        // Set current year in footer
-        document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
+Google Search Suggestions
+Display of Search Suggestions is required when using Grounding with Google Search. Learn more
+RAAJ CONSULTANCY SERVICES
+modern website design for IT consultancy
+responsive navbar html css javascript
+smooth scroll navigation javascript
+javascript contact form validation
+on-scroll fade-in animation css javascript
