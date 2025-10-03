@@ -292,6 +292,60 @@
             left: 0;
         }
 
+        /* Logo Carousel Section */
+        .logo-carousel-section {
+            background-color: var(--dark-bg-color);
+            padding: 40px 0; /* Reduced padding for a tighter look */
+            overflow: hidden; /* Hide overflowing logos */
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo-carousel-section h2 {
+            margin-bottom: 30px;
+        }
+
+        .logo-carousel {
+            white-space: nowrap; /* Keep all logos on one line */
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            mask-image: linear-gradient(to right, 
+                hsl(0 0% 0% / 0), 
+                hsl(0 0% 0% / 1) 15%, 
+                hsl(0 0% 0% / 1) 85%, 
+                hsl(0 0% 0% / 0)
+            ); /* Fading edges */
+        }
+
+        .logo-carousel-track {
+            display: inline-block; /* Allows side-by-side scrolling */
+            animation: scroll-left 30s linear infinite; /* Adjust duration for speed */
+        }
+
+        .logo-carousel:hover .logo-carousel-track {
+            animation-play-state: paused; /* Pause on hover */
+        }
+
+        .logo-carousel-track img {
+            height: 80px; /* Max height for logos */
+            width: auto; /* Maintain aspect ratio */
+            margin: 0 40px; /* Spacing between logos */
+            vertical-align: middle;
+            filter: grayscale(100%); /* Desaturate logos */
+            transition: filter 0.3s ease;
+        }
+
+        .logo-carousel-track img:hover {
+            filter: grayscale(0%); /* Full color on hover */
+        }
+
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); } /* Scrolls by 100% of its width */
+        }
+
+
         /* Contact Section */
         #contact {
             background-color: var(--dark-bg-color);
@@ -474,6 +528,11 @@
             .footer-box {
                 text-align: center;
             }
+
+            .logo-carousel-track img {
+                height: 60px; /* Smaller logos on mobile */
+                margin: 0 20px;
+            }
         }
     </style>
 </head>
@@ -618,6 +677,35 @@
              </div>
         </section>
 
+        <!-- New: Client Logo Carousel Section -->
+        <section class="logo-carousel-section" id="client-logos">
+            <h2 class="fade-in">Trusted by Leading Companies</h2>
+            <div class="logo-carousel">
+                <div class="logo-carousel-track">
+                    <img src="https://image2url.com/images/1759507217530-da01c1cc-cf57-46bb-9ddc-7f0906123d91.png" alt="AA Industries Logo">
+                    <img src="https://image2url.com/images/1759507463145-53e09d93-b04f-48e6-abe7-0c4c2bc6caf5.webp" alt="HFCL Logo">
+                    <img src="https://image2url.com/images/1759507513386-ad4b6b5a-4cc9-4c76-b5ad-e21d7cf089be.png" alt="GNEW Logo">
+                    <img src="https://image2url.com/images/1759507547238-a54984b3-5748-4f1f-8bb2-1e9eb305a97f.jpg" alt="Social Mastery Logo">
+                    <!-- Duplicate logos to ensure seamless loop -->
+                    <img src="https://image2url.com/images/1759507217530-da01c1cc-cf57-46bb-9ddc-7f0906123d91.png" alt="AA Industries Logo">
+                    <img src="https://image2url.com/images/1759507463145-53e09d93-b04f-48e6-abe7-0c4c2bc6caf5.webp" alt="HFCL Logo">
+                    <img src="https://image2url.com/images/1759507513386-ad4b6b5a-4cc9-4c76-b5ad-e21d7cf089be.png" alt="GNEW Logo">
+                    <img src="https://image2url.com/images/1759507547238-a54984b3-5748-4f1f-8bb2-1e9eb305a97f.jpg" alt="Social Mastery Logo">
+                </div>
+                <div class="logo-carousel-track">
+                    <img src="https://image2url.com/images/1759507217530-da01c1cc-cf57-46bb-9ddc-7f0906123d91.png" alt="AA Industries Logo">
+                    <img src="https://image2url.com/images/1759507463145-53e09d93-b04f-48e6-abe7-0c4c2bc6caf5.webp" alt="HFCL Logo">
+                    <img src="https://image2url.com/images/1759507513386-ad4b6b5a-4cc9-4c76-b5ad-e21d7cf089be.png" alt="GNEW Logo">
+                    <img src="https://image2url.com/images/1759507547238-a54984b3-5748-4f1f-8bb2-1e9eb305a97f.jpg" alt="Social Mastery Logo">
+                    <!-- Duplicate logos to ensure seamless loop -->
+                    <img src="https://image2url.com/images/1759507217530-da01c1cc-cf57-46bb-9ddc-7f0906123d91.png" alt="AA Industries Logo">
+                    <img src="https://image2url.com/images/1759507463145-53e09d93-b04f-48e6-abe7-0c4c2bc6caf5.webp" alt="HFCL Logo">
+                    <img src="https://image2url.com/images/1759507513386-ad4b6b5a-4cc9-4c76-b5ad-e21d7cf089be.png" alt="GNEW Logo">
+                    <img src="https://image2url.com/images/1759507547238-a54984b3-5748-4f1f-8bb2-1e9eb305a97f.jpg" alt="Social Mastery Logo">
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section id="contact">
             <div class="container">
@@ -643,7 +731,7 @@
         </section>
     </main>
 
-    <footer class="footer">
+        <footer class="footer">
         <div class="container footer-content">
             <div class="footer-box">
                 <h4>RAAJ CONSULTANCY SERVICES</h4>
@@ -655,6 +743,7 @@
                 <p><strong>Phone:</strong> <a href="tel:+918861612182">+91 8861612182</a></p>
                 <p><strong>Support:</strong> <a href="tel:+919740072049">+91 9740072049</a></p>
                 <p><strong>Email:</strong> <a href="mailto:raajconsultancyservices@outlook.com">raajconsultancyservices@outlook.com</a></p>
+		<p><strong>Email:</strong> <a href="mailto:info@raajconsultancy.com">info@raajconsultancy.com</a></p>
                 <p><strong>Website:</strong> <a href="http://www.raajconsultancy.com" target="_blank">www.raajconsultancy.com</a></p>
             </div>
              <div class="footer-box">
